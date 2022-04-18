@@ -2,6 +2,7 @@
 /log/
 /memory_persist/
 
+src/main/resources/application.properties
 
 ### VS Code ###
 .vscode/
