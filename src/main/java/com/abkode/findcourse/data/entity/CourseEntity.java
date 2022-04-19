@@ -25,7 +25,7 @@ public class CourseEntity extends BaseEntity implements Serializable {
     @Column(name="course_address")
     private String courseAddress;
 
-    @Column(name = "email")
+    @Column(name = "course_email")
     private String courseEmail;
 
     @Column(name = "course_types")
