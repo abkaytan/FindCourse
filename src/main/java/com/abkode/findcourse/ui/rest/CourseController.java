@@ -22,7 +22,7 @@ public class CourseController {
     private CourseService courseService;
 
     //LIST
-    //http://localhos:8080/api/v1/courses
+    //http://localhost:8080/api/v1/courses
     @GetMapping("/courses")
     public List<CourseDto> getAllCourse() {
         List<CourseDto> courseDtoList = courseService.getAllCourse();

@@ -36,7 +36,7 @@ public class StudentController {
 
 
     //SAVE
-    //http://localhos:8080/api/v1/students
+    //http://localhost:8080/api/v1/students
     @PostMapping("/students")
     public StudentDto createStudent(@RequestBody StudentDto studentDto) {
         studentService.createStudent(studentDto);
@@ -63,7 +63,7 @@ public class StudentController {
 
 
     //DELETE
-    //http://localhost:8080/api/v1/courses/1
+    //http://localhost:8080/api/v1/students/1
     @DeleteMapping("/students/{id}")
     public ResponseEntity<Map<String, Boolean>> deleteStudentById(@PathVariable Long id) {
 
