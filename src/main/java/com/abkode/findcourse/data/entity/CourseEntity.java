@@ -12,7 +12,7 @@ import java.io.Serializable;
 
 @Data
 @NoArgsConstructor
-@Builder
+//@Builder
 @Log4j2
 
 @Entity

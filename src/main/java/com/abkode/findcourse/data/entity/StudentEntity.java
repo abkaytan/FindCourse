@@ -15,7 +15,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 
-@Builder
+//@Builder
 @Log4j2
 
 @Entity
