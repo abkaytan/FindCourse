@@ -5,6 +5,7 @@ import com.abkode.findcourse.business.services.StudentService;
 import com.abkode.findcourse.data.entity.StudentEntity;
 import com.abkode.findcourse.data.repository.StudentRepository;
 import com.abkode.findcourse.exception.ResourceNotFoundException;
+import com.abkode.findcourse.exception.SameEmailException;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -46,6 +47,10 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public StudentDto createStudent(@RequestBody StudentDto studentDto) {
         StudentEntity studentEntity = studentDtoToEntity(studentDto);
+        boolean isExist = studentRepository.existsByEmail(studentEntity.getEmail());
+        if (isExist) {
+            throw new SameEmailException("Student already signed up with same email: " + studentEntity.getEmail());
+        }
         studentRepository.save(studentEntity);
         return studentDto;
     }
@@ -81,6 +86,11 @@ public class StudentServiceImpl implements StudentService {
     public ResponseEntity<StudentDto> updateStudent(@PathVariable Long id,@RequestBody StudentDto studentDto) {
 
         StudentEntity studentEntity = studentDtoToEntity(studentDto);
+
+        boolean isExist = studentRepository.existsByEmail(studentEntity.getEmail());
+        if (isExist) {
+            throw new SameEmailException("Student already signed up with same email: " + studentEntity.getEmail());
+        }
 
         StudentEntity student =studentRepository
                 .findById(id)
