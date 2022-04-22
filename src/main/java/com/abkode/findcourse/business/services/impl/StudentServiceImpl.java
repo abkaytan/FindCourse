@@ -50,6 +50,16 @@ public class StudentServiceImpl implements StudentService {
         return studentDto;
     }
 
+    /*
+    Annotations and and requests added to write codes more properly
+    @Override
+    public StudentDto createStudent(StudentDto studentDto) {
+        StudentEntity studentEntity = studentDtoToEntity(studentDto);
+        studentRepository.save(studentEntity);
+        return studentDto;
+    }
+    */
+
 
     //FIND
     //http://localhost:8080/api/v1/students/1
