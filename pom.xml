@@ -20,6 +20,7 @@
 
     <!--properties-->
     <properties>
+        <encoding>UTF-8</encoding>
         <java.version>17</java.version>
         <!--for maven-->
         <!--<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -195,7 +196,7 @@
 
     </dependencies>
 
-    <distributionManagement>
+    <!--<distributionManagement>
         <repository>
             <uniqueVersion>false</uniqueVersion>
             <id>corp1</id>
@@ -203,7 +204,7 @@
             <url>scp://repo/maven2</url>
             <layout>default</layout>
         </repository>
-    </distributionManagement>
+    </distributionManagement>-->
 
     <build>
         <plugins>
@@ -213,6 +214,17 @@
                 <version>3.1.0</version>
             </plugin>
         </plugins>
+       <!-- <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+                <excludes>
+                    <exclude>
+                        <groupId>org.projectlombok</groupId>
+                        <artifactId>lombok</artifactId>
+                    </exclude>
+                </excludes>
+            </configuration>
+        </plugin>-->
     </build>
-
 </project>
