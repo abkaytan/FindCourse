@@ -42,7 +42,7 @@ public class _09_JwtRequestFilter extends OncePerRequestFilter {
                 System.out.println("JWT Token has expired");
             }
         } else {
-            logger.warn("JWT diyor ki !!!  Token does not begin with Bearer String Hamit Mızrak ");
+            logger.warn("JWT diyor ki !!!  Token does not begin with Bearer String Abkode ");
         }
 
         // Once we get the token validate it.
