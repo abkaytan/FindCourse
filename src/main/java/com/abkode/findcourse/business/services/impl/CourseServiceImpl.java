@@ -4,6 +4,7 @@ import com.abkode.findcourse.business.dto.CourseDto;
 import com.abkode.findcourse.business.services.CourseService;
 import com.abkode.findcourse.data.entity.CourseEntity;
 import com.abkode.findcourse.data.repository.CourseRepository;
+import com.abkode.findcourse.data.repository.StudentRepository;
 import com.abkode.findcourse.exception.ResourceNotFoundException;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,9 @@ public class CourseServiceImpl implements CourseService {
     private CourseRepository courseRepository;
 
     @Autowired
+    private StudentRepository studentRepository;
+
+    @Autowired
     private ModelMapper modelMapper;
 
 
@@ -40,6 +44,15 @@ public class CourseServiceImpl implements CourseService {
 
         }
         return courseDtoList;
+    }
+
+    //LIST
+    //http://localhos:8080/api/v1/courses/java
+    @GetMapping("/courses/java")
+    @Override
+    public String[] getStudentsWhoWantsJava() {
+        String emails[] = studentRepository.getEmailsWhoSearchJava();
+        return emails;
     }
 
     //SAVE

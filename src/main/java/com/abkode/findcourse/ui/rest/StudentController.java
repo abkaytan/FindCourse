@@ -24,7 +24,7 @@ public class StudentController {
     }
 
     //LIST
-    //http://localhos:8080/api/v1/students
+    //http://localhost:8080/api/v1/students
     @GetMapping("/students")
     public List<StudentDto> getAllStudents() {
         return studentServiceImpl.getAllStudents();

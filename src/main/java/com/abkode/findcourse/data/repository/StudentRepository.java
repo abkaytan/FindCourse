@@ -18,4 +18,11 @@ public interface StudentRepository extends CrudRepository<StudentEntity, Long> {
             "FROM StudentEntity e " +
             "WHERE e.email = ?1")
     boolean existsByEmail(String email);
+
+    @Query(nativeQuery = true, value = "select email from students where requested_courses like 'java%'")
+    String[] getEmailsWhoSearchJava();
+    /*
+    @Query(nativeQuery = true, value = "select age AS age, count(age) AS count from employee e GROUP BY age")
+    List<EmployeeAgeStatistics> getAgesWithGroupingWithNativeQuery();
+     */
 }

@@ -16,7 +16,7 @@
     <artifactId>FindCourse</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>FindCourse</name>
-    <description>FindCourse</description>
+    <description>demo project for Spring Boot</description>
 
     <!--properties-->
     <properties>
@@ -33,10 +33,10 @@
     <dependencies>
 
         <!--Spring Security -->
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
+        </dependency>-->
 
         <!--validation-->
         <dependency>
@@ -71,35 +71,35 @@
         </dependency>-->
 
         <!-- swagger open-api-3.0-->
-        <dependency>
+        <!--<dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>
             <version>1.6.7</version>
-        </dependency>
+        </dependency>-->
 
         <!--thymeleaf-->
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
         <dependency>
             <groupId>org.thymeleaf.extras</groupId>
             <artifactId>thymeleaf-extras-springsecurity5</artifactId>
-        </dependency>
+        </dependency>-->
 
         <!--h2database-->
-        <dependency>
+        <!--<dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
-        </dependency>
+        </dependency>-->
 
         <!--Mysql-->
-        <dependency>
+        <!--<dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
-        </dependency>
+        </dependency>-->
 
         <!-- model mapper -->
         <dependency>
@@ -116,17 +116,18 @@
         </dependency>
 
         <!--  json web token-->
-        <dependency>
+        <!--<dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
             <version>0.9.1</version>
-        </dependency>
+        </dependency>-->
 
-        <!--<PostgreSql>
+        <!--<PostgreSql>-->
+        <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
-        </dependency>-->
+        </dependency>
 
         <!--Mysql-->
         <!--<dependency>
@@ -196,7 +197,7 @@
 
     </dependencies>
 
-    <!--<distributionManagement>
+    <distributionManagement>
         <repository>
             <uniqueVersion>false</uniqueVersion>
             <id>corp1</id>
@@ -204,7 +205,8 @@
             <url>scp://repo/maven2</url>
             <layout>default</layout>
         </repository>
-    </distributionManagement>-->
+    </distributionManagement>
+
 
     <build>
         <plugins>
@@ -214,17 +216,5 @@
                 <version>3.1.0</version>
             </plugin>
         </plugins>
-       <!-- <plugin>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-maven-plugin</artifactId>
-            <configuration>
-                <excludes>
-                    <exclude>
-                        <groupId>org.projectlombok</groupId>
-                        <artifactId>lombok</artifactId>
-                    </exclude>
-                </excludes>
-            </configuration>
-        </plugin>-->
     </build>
 </project>

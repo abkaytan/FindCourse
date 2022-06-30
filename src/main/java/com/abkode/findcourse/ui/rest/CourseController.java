@@ -22,6 +22,13 @@ public class CourseController {
         return courseServiceImpl.getAllCourse();
     }
 
+    //LIST
+    //http://localhost:8080/api/v1/courses/java
+    @GetMapping("/courses/java")
+    public String[] getStudentsWhoWantsJava() {
+        return courseServiceImpl.getStudentsWhoWantsJava();
+    }
+
     //SAVE
     //http://localhost:8080/api/v1/courses
     @PostMapping("/courses")
