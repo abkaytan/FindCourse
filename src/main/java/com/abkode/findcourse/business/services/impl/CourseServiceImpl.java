@@ -24,8 +24,8 @@ public class CourseServiceImpl implements CourseService {
     @Autowired
     private CourseRepository courseRepository;
 
-    @Autowired
-    private StudentRepository studentRepository;
+    /*@Autowired
+    private StudentRepository studentRepository;*/
 
     @Autowired
     private ModelMapper modelMapper;
@@ -51,7 +51,7 @@ public class CourseServiceImpl implements CourseService {
     @GetMapping("/courses/java")
     @Override
     public String[] getStudentsWhoWantsJava() {
-        String emails[] = studentRepository.getEmailsWhoSearchJava();
+        String emails[] = courseRepository.getEmailsWhoSearchJava();
         return emails;
     }
 
